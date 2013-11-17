@@ -3,6 +3,7 @@ require 'formula'
 class Libmaxminddb < Formula
   head 'https://github.com/maxmind/libmaxminddb.git'
   homepage 'https://github.com/maxmind'
+  version '0.5.0'
 
   depends_on 'automake' => :build
   depends_on 'libtool' => :build
