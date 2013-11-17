@@ -10,6 +10,12 @@ class Libmaxminddb < Formula
   depends_on 'libtool' => :build
 
   def install
+    if Hardware.is_32_bit?
+      ENV['ARCHFLAGS'] = "-arch #{Hardware::CPU.arch_32_bit}"
+    else
+      ENV['ARCHFLAGS'] = Hardware::CPU.universal_archs.as_arch_flags
+    end
+
     system "./bootstrap"
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
