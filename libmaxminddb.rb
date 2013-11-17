@@ -1,7 +1,7 @@
 require 'formula'
 
 class Libmaxminddb < Formula
-  head 'https://github.com/maxmind/libmaxminddb.git'
+  head 'https://github.com/maxmind/libmaxminddb.git', :revision => '8299f68bd83da08a3204a1d8bb964ae2f39fdd66'
   homepage 'https://github.com/maxmind'
   version '0.5.0'
 
